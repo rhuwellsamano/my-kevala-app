@@ -23,7 +23,6 @@ describe("App component", () => {
 
   it("enables submit button when file and filter type is selected", () => {
     let mockCsv = new File([""], "mockFile.csv", { type: "text/csv" });
-    // const alertSpy = jest.spyOn(window, "alert");
     render(<App />);
     const submitButton = screen.getByTestId("submit-button");
     const emailInput = screen.getByTestId("email-input");
@@ -38,7 +37,7 @@ describe("App component", () => {
     expect(emailInput).toBeChecked();
     expect(submitButton).toBeEnabled();
   });
-  /////////
+
   it("filters out by email", async () => {
     const csvData = `Luffy,MonkeyD,captain@sunny.com,1112223333
     Luffy,MonkeyD,pirate@sunny.com,1112223333
@@ -163,10 +162,4 @@ describe("App component", () => {
       expect(windowSpy).toHaveBeenCalledWith(newCsvFile);
     });
   });
-
-  /////////
-
-  ////////
 });
-
-// test for form upload
