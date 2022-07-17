@@ -22,7 +22,6 @@ function App() {
   };
 
   // logic for filtering out duplicate rows
-
   const removeDupes = (fileArray) => {
     const dict = {
       emails: {},
@@ -61,7 +60,7 @@ function App() {
     const filteredFile = removeDupes(fileAsMatrix);
     const newFileAsCsv = convertToCsv(filteredFile);
     window.open(newFileAsCsv);
-    // alert("File successfully filtered!");
+    alert("File successfully filtered!");
   };
 
   const handleFile = (e) => {
